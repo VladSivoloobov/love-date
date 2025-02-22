@@ -1,19 +1,49 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --primary: #2934d0;
+  --white: white;
+  --black: black;
+  --bg: #f3f3f3;
+  --orange: #f27121;
+  --red: #e94057;
+  --purple: #8a2387;
+  --border: #e8e6ea;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --text-primary-100: black;
+  --text-primary-70: #000000;
+  --text-primary-40: #000000;
+  --text-secondary: #323755;
+  --text-inactive: #adafbb;
+
+  --main-gradient: linear-gradient(
+    to top right,
+    var(--orange) 10%,
+    var(--red) 60%,
+    var(--purple) 100%
+  );
+
+  --h1-size: 34px;
+  --h1-weight: 700;
+  --h1-line-height: 150%;
+
+  --h2-size: 24px;
+  --h2-line-height: 150%;
+  --h2-weight: 700;
+
+  --text-size: 14px;
+  --text-line-height: 150%;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+body {
+  max-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 32px;
 }
 
 body {
@@ -33,10 +63,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
