@@ -24,7 +24,10 @@ const Number: React.FC = () => {
                 text='Please enter your valid phone number. We will send you a 4-digit code to verify your account.'
               />
             </VStack>
-            <PhoneInput />
+            <PhoneInput
+              phoneCompleted={phoneCompleted}
+              setPhoneCompleted={setPhoneCompleted}
+            />
           </VStack>
           <Button
             onClick={() => {

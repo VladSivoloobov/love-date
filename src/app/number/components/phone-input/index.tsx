@@ -5,11 +5,12 @@ import Select from 'react-dropdown-select';
 import styles from './phone-input.module.css';
 
 import { IMaskInput } from 'react-imask';
-import { useState } from 'react';
+import { SetStateAction } from 'react';
 
-const PhoneInput: React.FC = () => {
-  const [completed, setCompleted] = useState(false);
-
+const PhoneInput: React.FC<{
+  phoneCompleted: boolean;
+  setPhoneCompleted: React.Dispatch<SetStateAction<boolean>>;
+}> = ({ phoneCompleted, setPhoneCompleted }) => {
   const options = ['🇷🇺 (+7)', '🇺🇸 (+1)', 'uk (+9)'].map((code, index) => ({
     value: code,
     label: code,
@@ -31,13 +32,13 @@ const PhoneInput: React.FC = () => {
         placeholder='Phone number'
         className={`
           ${styles.input}
-          ${completed ? styles.completed : ''}
+          ${phoneCompleted ? styles.completed : ''}
         `}
         onAccept={() => {
-          setCompleted(false);
+          setPhoneCompleted(false);
         }}
         onComplete={() => {
-          setCompleted(true);
+          setPhoneCompleted(true);
         }}
         type='tel'
       />
