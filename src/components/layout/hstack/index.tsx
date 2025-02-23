@@ -27,7 +27,7 @@ const HStack: React.FC<StackLayout> = ({
       className={`
         ${styles.hStack}
         ${styles[wrap]} 
-        ${attributes.attributes?.className} 
+        ${attributes.className || ''} 
       `}
     >
       {children}

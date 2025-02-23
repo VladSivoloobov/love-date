@@ -1,0 +1,8 @@
+.stackNavigation {
+  width: 100%;
+}
+
+.stackNavigation > * {
+  flex-shrink: 0;
+  width: 100%;
+}

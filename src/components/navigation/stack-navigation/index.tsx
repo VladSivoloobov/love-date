@@ -1,3 +1,5 @@
+'use client';
+
 import HStack from '@/components/layout/hstack';
 import { PropsWithChildren, useEffect, useState } from 'react';
 import styles from './stack-navigation.module.css';
@@ -5,9 +7,11 @@ import React from 'react';
 
 const StackNavigation: React.FC<PropsWithChildren> = ({ children }) => {
   const [backButtonHandler, setBackButtonHandler] = useState<() => void>();
+  const [nextButtonHandler, setNextButtonHandler] = useState<() => void>();
 
   useEffect(() => {
     setBackButtonHandler(() => {});
+    setNextButtonHandler(() => {});
   }, [children]);
 
   return (
@@ -17,7 +21,8 @@ const StackNavigation: React.FC<PropsWithChildren> = ({ children }) => {
           return React.cloneElement(child, {
             key: i,
             backButtonHandler,
-          } as { key: number; backButtonHandler: () => void });
+            nextButtonHandler,
+          } as { key: number; backButtonHandler: () => void; nextButtonHandler: () => void });
         }
       })}
     </HStack>

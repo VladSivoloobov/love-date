@@ -1,0 +1,18 @@
+.numberMain {
+  padding-top: 128px;
+  padding-bottom: 40px;
+  min-height: 100%;
+}
+
+.numberMain .container {
+  min-height: 100%;
+}
+
+.numberMain .title {
+  font-size: 34px;
+  color: var(--black);
+}
+
+.numberMain .subtitle {
+  font-size: 16px;
+}

@@ -16,6 +16,7 @@ const Container: React.FC<
         padding: `${verticalPadding}px ${padding}px`,
         width: '100%',
         margin: '0 auto',
+        maxWidth: 'calc(347px + 40px)',
         ...attributes.style,
       }}
     >
