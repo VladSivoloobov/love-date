@@ -3,15 +3,23 @@ import textStyles from '@/css/text.module.css';
 
 import IText from '@/types/IText';
 
-const Title: React.FC<IText> = ({ text, textAlign = 'left', textSize }) => {
+const Title: React.FC<IText & React.HTMLAttributes<HTMLDivElement>> = ({
+  text,
+  textAlign = 'left',
+  textSize,
+  ...attributes
+}) => {
   return (
     <h2
+      {...attributes}
       className={`
     ${styles.title}
     ${textStyles[textAlign]}
+    ${attributes.className}
   `}
       style={{
         fontSize: `${textSize}px`,
+        ...attributes.style,
       }}
     >
       {text}

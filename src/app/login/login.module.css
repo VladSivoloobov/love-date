@@ -1,0 +1,32 @@
+.loginMain {
+  min-height: 100%;
+  padding-bottom: 48px;
+}
+
+.loginMain .container {
+  min-height: 100%;
+}
+
+.loginMain .title {
+  color: var(--text-primary-100);
+}
+
+.loginMain .loginAlternativeTitle {
+  display: flex;
+  width: 100%;
+  text-wrap: nowrap;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--black);
+}
+
+.loginAlternativeTitle::before,
+.loginAlternativeTitle::after {
+  width: 100%;
+  content: '';
+  display: block;
+  height: 0.5px;
+  background-color: black;
+  opacity: 0.4;
+}

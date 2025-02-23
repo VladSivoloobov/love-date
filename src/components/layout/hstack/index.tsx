@@ -22,6 +22,7 @@ const HStack: React.FC<StackLayout> = ({
         gap: gap + 'px',
         justifyContent: justifyContent || '',
         alignItems: alignItems || '',
+        ...attributes.style,
       }}
       className={`
         ${styles.hStack}
