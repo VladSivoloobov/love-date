@@ -10,7 +10,7 @@ const Text: React.FC<IText> = ({ text, textAlign = 'left', textSize }) => {
     ${textStyles[textAlign]}  
   `}
       style={{
-        fontSize: `${textSize}px`,
+        fontSize: `${textSize ? textSize + 'px' : ''}`,
       }}
     >
       {text}

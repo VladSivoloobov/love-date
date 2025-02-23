@@ -7,6 +7,10 @@
   margin-bottom: 44px;
 }
 
+.carousel {
+  overflow: visible !important;
+}
+
 .carouselItem {
   flex-shrink: 0;
   aspect-ratio: 200 / 300;
@@ -46,6 +50,10 @@
   gap: 8px;
   justify-content: center;
   margin-top: 30px;
+}
+
+.textSwiper {
+  overflow: visible !important;
 }
 
 .dotActive {

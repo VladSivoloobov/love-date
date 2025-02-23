@@ -11,6 +11,8 @@ const VStack: React.FC<StackLayout> = ({
   gap = 0,
   children,
   wrap = 'nowrap',
+  justifyContent = 'flex-start',
+  alignItems = 'stretch',
   ...attributes
 }: StackLayout) => {
   return (
@@ -18,6 +20,9 @@ const VStack: React.FC<StackLayout> = ({
       {...attributes}
       style={{
         gap: gap + 'px',
+        justifyContent: justifyContent || '',
+        alignItems: alignItems || '',
+        ...attributes.style,
       }}
       className={`
         ${styles.vStack}

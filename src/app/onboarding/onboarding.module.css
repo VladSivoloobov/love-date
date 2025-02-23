@@ -1,0 +1,10 @@
+.onboardingMain {
+  padding: 40px 0;
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.onboardingMain section {
+  height: 100%;
+}

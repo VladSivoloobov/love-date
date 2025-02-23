@@ -57,6 +57,8 @@ const Carousel: React.FC = () => {
           delay: 5000,
           waitForTransition: true,
         }}
+        slideToClickedSlide={true}
+        grabCursor={true}
       >
         {[image1, image2, image3].map((image, i) => (
           <SwiperSlide className={styles.carouselItem} key={i}>
@@ -82,6 +84,7 @@ const Carousel: React.FC = () => {
             control: photoSwiper,
           }}
           onInit={setTextSwiper}
+          grabCursor={true}
         >
           {sliderTextSlides.map((slide, i) => (
             <SwiperSlide key={i}>

@@ -7,4 +7,30 @@
   color: var(--white);
   font-size: 17px;
   font-weight: 600;
+  transition: background-color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.plainText {
+  color: var(--red);
+  font-weight: 700;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.3s;
+}
+
+@media (hover: hover) {
+  .primaryButton:hover {
+    background-color: var(--red-hover);
+  }
+  .plainText:hover {
+    color: var(--red-hover);
+  }
+}
+
+.primaryButton:active {
+  background-color: var(--red-active);
+}
+
+.plainText:active {
+  color: var(--red-active);
 }

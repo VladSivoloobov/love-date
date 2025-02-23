@@ -11,6 +11,8 @@ const HStack: React.FC<StackLayout> = ({
   gap = 0,
   children,
   wrap = 'nowrap',
+  justifyContent = 'flex-start',
+  alignItems = 'stretch',
   ...attributes
 }) => {
   return (
@@ -18,6 +20,8 @@ const HStack: React.FC<StackLayout> = ({
       {...attributes}
       style={{
         gap: gap + 'px',
+        justifyContent: justifyContent || '',
+        alignItems: alignItems || '',
       }}
       className={`
         ${styles.hStack}
