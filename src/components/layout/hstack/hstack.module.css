@@ -1,0 +1,8 @@
+.hStack {
+  display: flex;
+  flex-direction: row;
+}
+
+.hStack.wrap {
+  flex-wrap: wrap;
+}

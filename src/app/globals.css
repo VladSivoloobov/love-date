@@ -9,6 +9,7 @@
   --border: #e8e6ea;
 
   --text-primary-100: black;
+  --text-primary-100-opacity-10: #00000010;
   --text-primary-70: #000000;
   --text-primary-40: #000000;
   --text-secondary: #323755;
@@ -31,6 +32,8 @@
 
   --text-size: 14px;
   --text-line-height: 150%;
+
+  --timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 html,
@@ -44,6 +47,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding-top: 32px;
+  background-color: white;
 }
 
 body {

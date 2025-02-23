@@ -1,17 +1,18 @@
 import styles from './title.module.css';
+import textStyles from '@/css/text.module.css';
 
-interface ITitle {
-  text: string;
-  textAlign?: 'left' | 'center' | 'right';
-}
+import IText from '@/types/IText';
 
-const Title: React.FC<ITitle> = ({ text, textAlign = 'left' }) => {
+const Title: React.FC<IText> = ({ text, textAlign = 'left', textSize }) => {
   return (
     <h2
       className={`
     ${styles.title}
-    ${styles[textAlign]}
+    ${textStyles[textAlign]}
   `}
+      style={{
+        fontSize: `${textSize}px`,
+      }}
     >
       {text}
     </h2>

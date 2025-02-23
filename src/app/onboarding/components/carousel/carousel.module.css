@@ -21,11 +21,49 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: height 0.4s, width 0.4s;
+  transition: height 0.7s, width 0.7s;
   border-radius: inherit;
+  transition-timing-function: var(--timing-function);
 }
 
 .carouselItem:not(:global(.swiper-slide-active)) img {
   height: 300px;
   width: 200px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--text-primary-100-opacity-10);
+  display: block;
+  transition: background-color 0.3s, opacity 0.3s;
+  transition-timing-function: var(--timing-function);
+}
+
+.textSwiper :global(.swiper-pagination) {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.dotActive {
+  background-color: var(--red);
+  opacity: 1;
+}
+
+.slideWrapper {
+  transition: transform 0.3s, opacity 0.3s;
+  transition-timing-function: var(--timing-function);
+}
+
+.textSwiper :global(.swiper-slide-active) .slideWrapper {
+  transform: none;
+  opacity: 1;
+}
+
+.textSwiper .slideWrapper {
+  transform: scale(0.9);
+  opacity: 0;
 }

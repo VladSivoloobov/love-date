@@ -1,0 +1,8 @@
+.vStack {
+  display: flex;
+  flex-direction: column;
+}
+
+.vStack.wrap {
+  flex-wrap: wrap;
+}
