@@ -37,7 +37,7 @@ const sliderTextSlides = [
 /**
  * Компонент карусели, который показывает связаные слайдеры с фото и текстом.
  * TODO: Нужно сделать этот компонент переиспользуемым с возможностью передавать разные данные
- * @returns {React.FC}
+ * @returns
  */
 const Carousel: React.FC = () => {
   const [textSwiper, setTextSwiper] = useState<SwiperClass>();
