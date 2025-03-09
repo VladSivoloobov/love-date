@@ -8,6 +8,7 @@ import styles from './number.module.css';
 import PhoneInput from './components/phone-input';
 import Button, { ButtonTag } from '@/components/button';
 import { useState } from 'react';
+import { redirect } from 'next/navigation';
 
 const Number: React.FC = () => {
   const [phoneCompleted, setPhoneCompleted] = useState(false);
@@ -31,7 +32,9 @@ const Number: React.FC = () => {
           </VStack>
           <Button
             onClick={() => {
-              alert('hello');
+              if (phoneCompleted) {
+                redirect('/verification');
+              }
             }}
             buttonTag={ButtonTag.button}
             text='Continue'

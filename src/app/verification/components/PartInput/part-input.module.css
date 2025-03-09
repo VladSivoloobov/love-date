@@ -1,0 +1,41 @@
+.numberInput {
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--h1-size);
+  border: 1px solid var(--border);
+  outline: none;
+  font-weight: 700;
+  color: var(--border);
+  border-radius: 15px;
+  caret-color: var(--red);
+  transition: all 0.1s;
+}
+
+.numberInput::placeholder {
+  opacity: 0.1;
+  transition: all 0.1s;
+}
+
+.numberInput:focus {
+  border: 1px solid var(--red);
+  outline: none;
+}
+
+.numberInput:focus::placeholder {
+  color: var(--red);
+}
+
+.numberInput:focus:not(:placeholder-shown)::placeholder {
+  color: transparent;
+}
+
+.numberInput:not(:placeholder-shown) {
+  background-color: var(--red);
+  color: white;
+  caret-color: var(--white);
+}

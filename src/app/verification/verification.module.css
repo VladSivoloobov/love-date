@@ -1,0 +1,11 @@
+.main {
+  padding-top: 128px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  font-size: var(--h1-size);
+  font-weight: 600;
+  line-height: 150%;
+}
