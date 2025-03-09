@@ -1,3 +1,7 @@
+:global(button) {
+  background: transparent;
+}
+
 .button {
   display: flex;
   gap: 24px;

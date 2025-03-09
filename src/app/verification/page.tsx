@@ -6,6 +6,7 @@ import VStack from '@/components/layout/vstack';
 import PartInput from './components/PartInput';
 import { redirect } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Button, { ButtonStyle, ButtonTag } from '@/components/button';
 
 const Verification: React.FC = () => {
   const [timer, setTimer] = useState(59);
@@ -32,12 +33,21 @@ const Verification: React.FC = () => {
   return (
     <main className={styles.main}>
       <Container>
-        <VStack gap={48}>
-          <VStack justifyContent='center'>
-            <div className={styles.timer}>00:{timer}</div>
-            <p>Type the ferification code we sent you</p>
+        <VStack gap={24}>
+          <VStack gap={48}>
+            <VStack justifyContent='center'>
+              <div className={styles.timer}>00:{timer}</div>
+              <p>Type the ferification code we sent you</p>
+            </VStack>
+            <PartInput callback={successfullCodeCallback} />
           </VStack>
-          <PartInput callback={successfullCodeCallback} />
+
+          <Button
+            className={styles.sendButton}
+            text='Send again'
+            buttonTag={ButtonTag.button}
+            style={ButtonStyle.plainText}
+          />
         </VStack>
       </Container>
     </main>

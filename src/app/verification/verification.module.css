@@ -9,3 +9,9 @@
   font-weight: 600;
   line-height: 150%;
 }
+
+.sendButton {
+  font-size: 20px;
+  width: fit-content;
+  margin: 0 auto;
+}

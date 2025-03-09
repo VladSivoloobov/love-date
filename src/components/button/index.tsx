@@ -37,6 +37,7 @@ const Button: React.FC<
       ${styles.button}
       ${styles[ButtonStyle[style]]}
       ${!text && icon ? styles.onlyIcon : ''}
+      ${attributes.className}
     `,
     href,
   };
@@ -50,7 +51,7 @@ const Button: React.FC<
 
   return React.createElement(
     ButtonTag[buttonTag] === 'link' ? Link : 'button',
-    { ...props, ...attributes },
+    { ...attributes, ...props },
     children
   );
 };
