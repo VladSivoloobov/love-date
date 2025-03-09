@@ -1,0 +1,14 @@
+.main {
+  padding-top: 56px;
+}
+
+.skipButton {
+  margin-left: auto;
+  font-size: 18px;
+}
+
+.main .title {
+  font-size: var(--h1-size);
+  color: var(--black);
+  line-height: var(--h1-line-height);
+}
