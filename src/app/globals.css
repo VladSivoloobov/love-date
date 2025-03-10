@@ -76,3 +76,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
+button {
+  user-select: none;
+}

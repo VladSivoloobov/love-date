@@ -19,9 +19,21 @@
   width: 60px;
   height: 60px;
   display: block;
+  transform-origin: bottom right;
+  transition: transform 0.3s;
 }
 
 .cameraButton img {
   width: inherit;
   height: inherit;
+}
+
+@media (hover: hover) {
+  .cameraButton:hover {
+    transform: scale(0.96);
+  }
+}
+
+.cameraButton:active {
+  transform: scale(0.9);
 }

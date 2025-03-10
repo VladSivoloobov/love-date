@@ -1,5 +1,6 @@
 .main {
   padding-top: 56px;
+  padding-bottom: 48px;
 }
 
 .skipButton {
@@ -11,4 +12,23 @@
   font-size: var(--h1-size);
   color: var(--black);
   line-height: var(--h1-line-height);
+}
+
+.main .calendarButton {
+  justify-content: flex-start;
+  background-color: color-mix(in srgb, var(--red) 10%, transparent 90%);
+  color: var(--red);
+  padding: 20px;
+  align-items: center;
+  font-size: 17px;
+}
+
+@media (hover: hover) {
+  .main .calendarButton:hover {
+    background-color: color-mix(in srgb, var(--red) 20%, transparent 80%);
+  }
+}
+
+.main .calendarButton:active {
+  background-color: color-mix(in srgb, var(--red) 30%, transparent 70%);
 }

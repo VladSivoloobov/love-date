@@ -1,0 +1,43 @@
+.inputWrapper {
+  position: relative;
+}
+
+.inputLabel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 20px;
+  pointer-events: none;
+  margin: auto 0;
+  height: max-content;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  display: block;
+  transition: all 0.3s;
+  transform-origin: left;
+  width: max-content;
+  padding: 0px 3px;
+}
+
+.input::placeholder {
+  color: transparent;
+}
+
+.input {
+  padding: 20px;
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid var(--border);
+  color: black;
+  font-size: 17px;
+}
+
+.inputLabel:has(+ .input:focus, + .input:not(:placeholder-shown)) {
+  bottom: 100%;
+  transform: scale(0.9);
+  background-color: white;
+  left: 25px;
+}

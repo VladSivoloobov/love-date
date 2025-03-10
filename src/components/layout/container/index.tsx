@@ -1,3 +1,5 @@
+'use client';
+
 interface IContainer {
   maxWidth?: number;
   padding?: number;
