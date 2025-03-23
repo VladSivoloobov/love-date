@@ -32,3 +32,38 @@
 .main .calendarButton:active {
   background-color: color-mix(in srgb, var(--red) 30%, transparent 70%);
 }
+
+.sheet {
+  backdrop-filter: brightness(0.7);
+}
+
+.sheet :global(.react-modal-sheet-container) {
+  padding: 60px 40px 0 40px;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  mask: url('@/images/icons/ui/sheet-mask.svg');
+  mask-position: 0 0 0;
+  mask-size: cover;
+}
+
+.sheet :global(.react-modal-sheet-container)::before {
+  content: '';
+  position: absolute;
+  height: 12.06px;
+  width: 27px;
+  background-image: url('@/images/icons/ui/indicator.svg');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  margin: auto;
+  z-index: 909999;
+}
+
+.calendar :global(.react-calendar__navigation) {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar :global(.react-calendar__navigation__label__labelText) {
+}

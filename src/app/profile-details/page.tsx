@@ -12,10 +12,13 @@ import { useState } from 'react';
 
 import calendarIcon from '@/images/icons/ui/Calendar.svg';
 import { Sheet } from 'react-modal-sheet';
+import Calendar from 'react-calendar';
 
 const ProfileDetails: React.FC = () => {
   const [, setFirstName] = useState('');
   const [, setLastName] = useState('');
+
+  const [sheetIsOpen, setSheetIsOpen] = useState(false);
 
   return (
     <main className={styles.main}>
@@ -44,6 +47,7 @@ const ProfileDetails: React.FC = () => {
                 callback={setLastName}
               />
               <Button
+                onClick={() => setSheetIsOpen(true)}
                 buttonTag={ButtonTag.button}
                 icon={calendarIcon}
                 text='Choose birthday date'
@@ -53,6 +57,22 @@ const ProfileDetails: React.FC = () => {
             <Button text='Confirm' />
           </VStack>
         </VStack>
+        <Sheet
+          className={styles.sheet}
+          isOpen={sheetIsOpen}
+          onClose={() => setSheetIsOpen(false)}
+          snapPoints={[400, 0]}
+          initialSnap={0}
+          onSnap={(snapIndex) =>
+            console.log('> Current snap point index:', snapIndex)
+          }
+        >
+          <Sheet.Container>
+            <Sheet.Content>
+              <Calendar className={styles.calendar} />
+            </Sheet.Content>
+          </Sheet.Container>
+        </Sheet>
       </Container>
     </main>
   );
